@@ -6,9 +6,14 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenLocal()
+    maven { url "http://repo.maven.apache.org/maven2" }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // 添加本地jar包
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // lombok
+    compileOnly('org.projectlombok:lombok')
 }
