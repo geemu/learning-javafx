@@ -1,4 +1,4 @@
-package me.geemu.chapter5_UI.Button;
+package me.geemu.chapter5_UI.button;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

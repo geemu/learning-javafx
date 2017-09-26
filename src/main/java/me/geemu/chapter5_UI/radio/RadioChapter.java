@@ -11,7 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Radio extends Application {
+public class RadioChapter extends Application {
 
     private final ImageView icon = new ImageView();
     
