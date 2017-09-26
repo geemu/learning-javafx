@@ -35,7 +35,7 @@ public class LabelChapter extends Application {
 
 
         HBox hbox = new HBox();
-        Image image = new Image(getClass().getResourceAsStream("/chapter5/label.png"));
+        Image image = new Image(getClass().getResourceAsStream("/chapter5/label/label.png"));
 
         Label label1 = new Label("标签1");
         // 指定图标
