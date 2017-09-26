@@ -16,5 +16,5 @@ dependencies {
     // 添加本地jar包
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // lombok
-    compileOnly('org.projectlombok:lombok')
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
 }
