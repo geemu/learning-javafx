@@ -1,4 +1,4 @@
-package me.geemu.chapter5; /**
+package me.geemu.chapter5_UI.label; /**
  * Author: 陈方明
  * Email: cfmmail@sina.com
  * Date: 2017/9/26 13:01
