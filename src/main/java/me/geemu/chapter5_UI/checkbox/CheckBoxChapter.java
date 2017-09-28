@@ -41,6 +41,7 @@ public class CheckBoxChapter extends Application {
         primaryStage.setWidth(250);
         primaryStage.setHeight(150);
 
+        // 右边长方形
         rect.setArcHeight(10);
         rect.setArcWidth(10);
         rect.setFill(Color.rgb(41, 20, 20));
