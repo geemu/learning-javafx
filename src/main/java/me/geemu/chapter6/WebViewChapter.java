@@ -6,6 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -26,28 +27,28 @@ import javafx.stage.Stage;
  */
 public class WebViewChapter extends Application {
 
-    public static final String defaultURL = "file:///C:/Users/user/Desktop/index.html";
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
         Group group = new Group();//作为根节点，也就是root
+        primaryStage.setWidth(600);
+        primaryStage.setHeight(500);
         primaryStage.setScene(new Scene(group));
 
         WebView webView = new WebView();
-        final WebEngine engine = webView.getEngine();
-        engine.load(defaultURL);
+        final WebEngine webEngine = webView.getEngine();
+        webEngine.load(WebViewChapter.class.getResource("/chapter6/index.html").toExternalForm());
 
-        VBox vBox = new VBox();
-        vBox.getChildren().addAll(webView);
-        group.getChildren().add(vBox);
+
+        webEngine.setOnAlert((WebEvent<String> wEvent) -> {
+            System.out.println("Alert Event  -  Message:  " + wEvent.getData());
+        });
+
+        group.getChildren().add(webView);
         primaryStage.show();
-    }
-
-    /**
-     * @param args
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }
