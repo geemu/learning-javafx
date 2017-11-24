@@ -1,19 +1,8 @@
 package me.geemu.chapter6;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.concurrent.Worker;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebEvent;
 import javafx.scene.web.WebView;
@@ -33,7 +22,8 @@ public class WebViewChapter extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Group group = new Group();//作为根节点，也就是root
+        // 作为根节点，也就是root
+        Group group = new Group();
         primaryStage.setWidth(600);
         primaryStage.setHeight(500);
         primaryStage.setScene(new Scene(group));
